@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    /*
+    Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+    где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+    В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5)
+    и вернуть полученное значение (использовать switch).
+    */
+
+    //Как подключить функции из другого файла. Посмотрел в интеренете несколько сайтов - не работает. Несколько часов решил не тратить.
+
+
+    function addition_numbers(x, y) {
+        return x + y
+    }
+
+    function subtraction_numbers(x, y) {
+        return x - y;
+    }
+    function multiplication_numbers(x, y) {
+        return x * y;
+    }
+    function division_numbers(x, y) {
+        return x / y;
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "addition":
+                return addition_numbers(arg1, arg2);
+            case "subtraction":
+                return subtraction_numbers(arg1, arg2);
+            case "multiplication":
+                return multiplication_numbers(arg1, arg2);
+            case "division":
+                return division_numbers(arg1, arg2);
+
+        }
+    }
+
+    alert(mathOperation(2, 0, "division"));
+
+
+
+</script>
