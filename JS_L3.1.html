@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    /*
+    С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+    */
+
+    var i = 2;
+    var n = 100;
+    var natural = []         //Мне так больше нравиться, но можно и просто выводить каждый раз, а не добавлять в массив
+    while (i <= n) {         //Конечно через два for красивее
+        for (let j = 2; j <= i; j++) {
+            if ((i % j == 0) && (j != i)) {
+                break;
+            }
+            else {
+                natural.push(i);
+                break;
+            }
+        }
+        i++;
+    }
+    console.log(natural);
+
+
+</script>
