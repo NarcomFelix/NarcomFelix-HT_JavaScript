@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    /*
+    Продолжить работу с интернет-магазином:
+    1. В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+    2. Реализуйте такие объекты.
+    3. Перенести функционал подсчета корзины на объектно-ориентированную базу
+    */
+    'use strict';
+    const basket = {
+        goods: [
+            {
+                id_poduct: 1,
+                product_name: "bicycle",
+                price: 20000,
+                qauntity: 5
+            },
+            {
+                id_poduct: 2,
+                product_name: "wheel",
+                price: 4000,
+                qauntity: 10
+            },
+            {
+                id_poduct: 3,
+                product_name: "frame",
+                price: 8000,
+                qauntity: 6
+            },
+            {
+                id_poduct: 4,
+                product_name: "handlebar",
+                price: 2000,
+                qauntity: 4
+            },
+            {
+                id_poduct: 5,
+                product_name: "handlebar",
+                price: 2000,
+                qauntity: 4
+            },
+            {
+                id_poduct: 6,
+                product_name: "seat",
+                price: 2000,
+                qauntity: 6
+            }
+        ],
+        countBasketPrice() {
+            return this.goods.reduce((totalPrice, cartItem) => totalPrice + cartItem.price * cartItem.qauntity, 0);
+        }
+    };
+
+    console.log(basket.countBasketPrice())
+
+
+
+</script>
